@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "UCOLIS",
+    "slug": "ucolis",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#FF6B35"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dz.ucolis.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "UCOLIS utilise votre position pour détecter votre wilaya.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "UCOLIS partage votre position avec l'expéditeur pendant la livraison, même en arrière-plan.",
+        "NSLocationAlwaysUsageDescription": "UCOLIS partage votre position avec l'expéditeur pendant la livraison, même en arrière-plan.",
+        "NSPhotoLibraryUsageDescription": "UCOLIS accède à votre galerie pour les photos de colis.",
+        "NSCameraUsageDescription": "UCOLIS utilise votre caméra pour photographier les colis.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "dz.ucolis.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "CAMERA",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF6B35"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "UCOLIS partage votre position avec l'expéditeur pendant la livraison, même en arrière-plan.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "UCOLIS accède à votre galerie pour les photos de colis.",
+          "cameraPermission": "UCOLIS utilise votre caméra pour photographier les colis."
+        }
+      ]
+    ]
+  }
+}
